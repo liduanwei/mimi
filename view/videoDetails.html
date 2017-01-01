@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自由飞翔</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script type="text/javascript">
+//        根据屏幕宽度，设置字体
+        document.addEventListener('DOMContentLoaded', function (e) {
+            document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+        }, false);
+//        input自动换行，自适应高度
+var autoTextarea = function (elem, extra, maxHeight) {
+    extra = extra || 0;
+    var isFirefox = !!document.getBoxObjectFor || 'mozInnerScreenX' in window,
+        isOpera = !!window.opera && !!window.opera.toString().indexOf('Opera'),
+        addEvent = function (type, callback) {
+            elem.addEventListener ?
+                elem.addEventListener(type, callback, false) :
+                elem.attachEvent('on' + type, callback);
+        },
+        getStyle = elem.currentStyle ? function (name) {
+            var val = elem.currentStyle[name];
+
+            if (name === 'height' && val.search(/px/i) !== 1) {
+                var rect = elem.getBoundingClientRect();
+                return rect.bottom - rect.top -
+                    parseFloat(getStyle('paddingTop')) -
+                    parseFloat(getStyle('paddingBottom')) + 'px';
+            }
+            ;
+
+            return val;
+        } : function (name) {
+            return getComputedStyle(elem, null)[name];
+        },
+        minHeight = parseFloat(getStyle('height'));
+
+    elem.style.resize = 'none';
+
+    var change = function () {
+        var scrollTop, height,
+            padding = 0,
+            style = elem.style;
+
+        if (elem._length === elem.value.length) return;
+        elem._length = elem.value.length;
+
+        if (!isFirefox && !isOpera) {
+            padding = parseInt(getStyle('paddingTop')) + parseInt(getStyle('paddingBottom'));
+        }
+        ;
+        scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+
+        elem.style.height = minHeight + 'px';
+        if (elem.scrollHeight > minHeight) {
+            if (maxHeight && elem.scrollHeight > maxHeight) {
+                height = maxHeight - padding;
+                style.overflowY = 'auto';
+            } else {
+                height = elem.scrollHeight - padding;
+                style.overflowY = 'hidden';
+            }
+            ;
+            style.height = height + extra + 'px';
+            scrollTop += parseInt(style.height) - elem.currHeight;
+//                    document.body.scrollTop = scrollTop;
+            document.documentElement.scrollTop = scrollTop;
+            elem.currHeight = parseInt(style.height);
+        }
+        ;
+    };
+
+    addEvent('propertychange', change);
+    addEvent('input', change);
+    addEvent('focus', change);
+    change();
+};
+    </script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/videoDetails.css">
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+
+
+</head>
+<body>
+<div class="container">
+    <div class="video-play">
+        <div class="video-pic">
+            <div class="play-icon">
+                <span></span>
+            </div>
+        </div>
+        <div class="video-feedback">
+            <ul class="common-list">
+                <li class="approval"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>1.2万</span></li>
+                <li class="tread"><i class="fa fa-thumbs-down" aria-hidden="true"></i> <span>1万</span></li>
+                <li class="comment"><i class="fa fa-commenting" aria-hidden="true"></i></i> <span>544</span>
+                </li>
+                <li class="share"><i class="fa fa-mail-forward" aria-hidden="true"></i> <span>2.3万</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="comment-container">
+        <div class="hot-comment">
+            热门评论(4)
+        </div>
+        <div class="row-comment">
+            <div class="user-pic user-pic1">
+
+            </div>
+            <div class="coment-content">
+                <div class="user-name">
+                    <span class="overflow-point">回忆、勾勒的曾经</span>
+                    <i>2小时前</i>
+                </div>
+                <div class="comment-text">
+                    真是太棒了，这是什么设备啊？我也要去唱
+                </div>
+            </div>
+        </div>
+        <div class="row-comment">
+            <div class="user-pic user-pic2">
+
+            </div>
+            <div class="coment-content">
+                <div class="user-name">
+                    <span class="overflow-point">空心不是没有心゜</span>
+                    <i>4小时前</i>
+                </div>
+                <div class="comment-text">
+                    给我的感觉是很90后，全是跟着一起长大的玩意儿，讲道理我95年的是没办法不喜欢，再加上主要做推理题材的，看过一集就直接追到了最新的一期，整个团队从人到华生都很努力，做的东西真的很用心，相信之后不会再是十八线网黑了，会火的！
+                </div>
+            </div>
+        </div>
+        <div class="row-comment">
+            <div class="user-pic user-pic3">
+
+            </div>
+            <div class="coment-content">
+                <div class="user-name">
+                    <span class="overflow-point">小爷有小爷的独特范 #</span>
+                    <i>5小时前</i>
+                </div>
+                <div class="comment-text">
+                    好好听
+                </div>
+            </div>
+        </div>
+        <div class="row-comment">
+            <div class="user-pic user-pic4">
+
+            </div>
+            <div class="coment-content">
+                <div class="user-name">
+                    <span class="overflow-point">潘神的米宫</span>
+                    <i>一天前</i>
+                </div>
+                <div class="comment-text">
+                    我也很喜欢这首歌，可是不太会唱
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="edit-comment">
+    <div class="ipt-box">
+        <input type="text" placeholder="输入评论">
+    </div>
+</div>
+</body>
+</html>

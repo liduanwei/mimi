@@ -1,0 +1,104 @@
+//控制页面
+
+@import "public";
+
+body,html{
+  height: 100%;
+}
+.bg-blur{
+  height: 100%;
+  background: url('../img/user02.jpg') no-repeat center;
+  background-size: cover;
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+}
+.container{
+  position: relative;
+}
+.content{
+  position: absolute;
+  top: 0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  z-index:100;
+};
+.ctrl-header{
+  margin-top:px2rem(40px);
+  text-align: center;
+  color:#fff;
+}
+.ctrl-song-name{
+  padding:px2rem(28px) 0;
+  font-size: px2rem(35px);
+}
+.ctrl-singer-name{
+  font-size: px2rem(20px);
+}
+.ctrl-song-pic{
+  width:px2rem(630px);
+  height:px2rem(630px);
+  border-radius: 100%;
+  border:px2rem(10px) solid #999;
+  margin:px2rem(85px) auto;
+  background: url("../img/user02.jpg") no-repeat center;
+  background-size:cover;
+  -webkit-animation:change 20s linear infinite;
+}
+
+@-webkit-keyframes change {
+  0% {-webkit-transform:rotate(0deg);}
+  50%{-webkit-transform:rotate(180deg);}
+  100%{-webkit-transform:rotate(360deg);}
+}
+.ctrl-footer{
+  color:#fff;
+  position: fixed;
+  left:0;
+  width: 100%;
+  bottom:px2rem(140px);
+  font-size: px2rem(30px);
+}
+.play-box{
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  line-height:2;
+  width:100%;
+  li{
+    flex: 1;
+    text-align: center;
+  }
+}
+.play-pause{
+  position: relative;
+  div{
+    position: absolute;
+    top:0;
+    left:50%;
+    line-height:2;
+    margin-left:- px2rem(30px);
+    text-align: center;
+  }
+}
+.pause{
+  display: none;
+}
+
+//.ctrl-header,.ctrl-body,.ctrl-footer{
+//  position: absolute;
+//  left:0;
+//  background-color: red;
+//}
+//.ctrl-header{
+//  top:0;
+//}
+//.ctrl-body{
+//  top:50%;
+//}
+//.ctrl-footer{
+//  bottom:0;
+//}

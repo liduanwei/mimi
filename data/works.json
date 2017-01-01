@@ -1,0 +1,13 @@
+{ "data": [
+  { "songName": "自由飞翔", "imgUrl":"img/music01.jpg", "lookNumber": "12","status":"更新中" },
+  { "songName": "蒲公英的约定", "imgUrl":"img/music02.jpg", "lookNumber": "1","status":"更新完成" },
+  { "songName": "能不能给我一首歌的时间", "imgUrl":"img/music03.jpg", "lookNumber": "32","status":"更新完成" },
+  { "songName": "演员", "imgUrl":"img/music04.jpg", "lookNumber": "454","status":"更新完成" },
+  { "songName": "水手怕水", "imgUrl":"img/music05.jpg", "lookNumber": "21","status":"更新完成" },
+  { "songName": "悲伤的大提琴", "imgUrl":"img/music06.jpg", "lookNumber": "65","status":"更新完成" },
+  { "songName": "太爱我", "imgUrl":"img/music04.jpg", "lookNumber": "5","status":"更新完成" },{ "songName": "自由飞翔", "imgUrl":"img/music01.jpg", "lookNumber": "12","status":"更新中" },
+  { "songName": "蒲公英的约定", "imgUrl":"img/music02.jpg", "lookNumber": "1","status":"更新完成" },
+  { "songName": "能不能给我一首歌的时间", "imgUrl":"img/music03.jpg", "lookNumber": "32","status":"更新完成" },
+  { "songName": "演员", "imgUrl":"img/music04.jpg", "lookNumber": "454","status":"更新完成" },
+  { "songName": "水手怕水", "imgUrl":"img/music05.jpg", "lookNumber": "21","status":"更新完成" }
+]}

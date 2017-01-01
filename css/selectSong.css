@@ -1,0 +1,165 @@
+@charset "UTF-8";
+body {
+  font-size: 0.26667rem;
+  color: #404040;
+  -webkit-user-select: none;
+  /* 禁止选中文本（如无文本选中需求，此为必选项） */
+  user-select: none; }
+
+* {
+  padding: 0;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+input, textarea {
+  -webkit-appearance: none; }
+
+li {
+  list-style: none; }
+
+a, img {
+  -webkit-touch-callout: none;
+  /* 禁止长按链接与图片弹出菜单 */ }
+
+.text-danger {
+  color: #d81200; }
+
+.text-active {
+  color: #20cc85; }
+
+.overflow-point {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.video-pic {
+  position: relative;
+  height: 5.22667rem;
+  background: url(../img/video01.jpg) no-repeat center;
+  background-size: cover; }
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.33333rem;
+  height: 1.33333rem;
+  border-radius: 100%;
+  border: 0.01333rem solid rgba(255, 255, 255, 0.3);
+  margin-top: -0.66667rem;
+  margin-left: -0.66667rem;
+  background-color: transparent; }
+  .play-icon span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0;
+    width: 0;
+    border-left: 0.46667rem solid rgba(255, 255, 255, 0.5);
+    border-top: 0.46667rem solid transparent;
+    border-bottom: 0.46667rem solid transparent;
+    margin-top: -0.46667rem;
+    margin-left: -0.23333rem; }
+
+.video-feedback {
+  margin-top: 0.2rem; }
+
+.common-list {
+  padding: 0.48rem 0.10667rem;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  color: #c0c0c0; }
+  .common-list li {
+    width: 1.97333rem; }
+  .common-list i {
+    font-size: 0.4rem;
+    margin-right: 0.24rem; }
+  .common-list span {
+    font-size: 0.26667rem; }
+
+.share {
+  flex-grow: 1;
+  text-align: right; }
+
+.row-comment {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  padding: 0.48rem 0 0.36rem 0.08rem;
+  border-bottom: 0.01333rem solid #e0e0e0; }
+
+.user-pic {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100%;
+  margin-right: 0.26667rem; }
+
+.user-pic1 {
+  background: url(../img/user.jpg) no-repeat center;
+  background-size: cover; }
+
+.user-pic2 {
+  background: url(../img/user02.jpg) no-repeat center;
+  background-size: cover; }
+
+.user-pic3 {
+  background: url(../img/user03.jpg) no-repeat center;
+  background-size: cover; }
+
+.user-pic4 {
+  background: url(../img/user04.jpg) no-repeat center;
+  background-size: cover; }
+
+.user-name {
+  padding-top: 0.08rem;
+  width: 100%; }
+  .user-name span {
+    display: inline-block;
+    width: 60%;
+    overflow: hidden;
+    color: #808080;
+    font-size: 0.34667rem; }
+  .user-name i {
+    font-style: normal;
+    float: right;
+    padding-right: 0.6rem;
+    color: #c0c0c0; }
+
+.comment-text {
+  margin-top: 0.4rem;
+  font-size: 0.4rem;
+  padding-right: 0.6rem; }
+
+.select-song-header {
+  padding: 0.26667rem 0;
+  text-align: center;
+  font-size: 0.4rem;
+  border-bottom: 0.01333rem solid #e0e0e0; }
+
+.song-list-title {
+  padding: 0.26667rem 0 0.26667rem 0.4rem;
+  font-size: 0.32rem;
+  color: #20cc85;
+  border-bottom: 0.01333rem solid #e0e0e0; }
+
+.song-row {
+  position: relative;
+  padding: 0.30667rem 0.4rem 0.26667rem 0.4rem;
+  border-bottom: 0.01333rem solid #e0e0e0; }
+
+.song-name {
+  font-size: 0.4rem; }
+
+.song-info {
+  font-size: 0.32rem;
+  margin-top: 0.16rem;
+  color: #c0c0c0; }
+
+.btn-song {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.53333rem;
+  color: #7e7e7e;
+  font-size: 0.34667rem; }

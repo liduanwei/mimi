@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自由飞翔</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function (e) {
+            document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+        }, false);
+    </script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/videoClips.css">
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+</head>
+<body>
+<div class="container">
+    <div class="video-header">
+        <div class="video-title">
+            自由飞翔视频片段
+        </div>
+        <div class="empty"></div>
+    </div>
+    <div class="video-content">
+        <div class="video-list">
+            <div class="user-info">
+                <div class="user-box">
+                    <div class="user-pic"></div>
+                </div>
+                <div class="user-name">
+                    宿命无情
+                </div>
+            </div>
+            <div class="video-part">
+                <span>自由飞翔片段</span><span>一</span>
+            </div>
+            <div class="video-play">
+                <div class="video-pic">
+                    <div class="play-icon">
+                        <span></span>
+                    </div>
+                    <span class="video-time">3:40</span>
+                </div>
+                <!--默认评论 star-->
+                <div class="row-comment comment-bg">
+                    <div class="user-pic user-pic3">
+
+                    </div>
+                    <div class="coment-content">
+                        <div class="user-name">
+                            <span class="overflow-point">回忆、勾勒的曾经</span>
+                            <i>2小时前</i>
+                        </div>
+                        <div class="comment-text">
+                            真是太棒了，这是什么设备啊？我也要去唱
+                        </div>
+                    </div>
+                </div>
+                <!--默认评论 end-->
+                <div class="video-feedback">
+                    <ul class="common-list">
+                        <li class="approval"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>1.2万</span></li>
+                        <li class="tread"><i class="fa fa-thumbs-down" aria-hidden="true"></i> <span>1万</span></li>
+                        <li class="comment"><i class="fa fa-commenting" aria-hidden="true"></i></i> <span>544</span>
+                        </li>
+                        <li class="share"><i class="fa fa-mail-forward" aria-hidden="true"></i> <span>2.3万</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/zepto.min.js"></script>
+<script>
+    $(function(){
+        $(".video-list").click(function(){
+            window.location.href = "videoDetails.html"
+        });
+    })
+</script>
+</body>
+</html>

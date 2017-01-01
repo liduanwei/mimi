@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点歌台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function (e) {
+            document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+        }, false);
+    </script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/selectSong.css">
+    <link rel="stylesheet" href="../css/dropload.css">
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+</head>
+<body>
+<div class="container">
+    <div class="select-song-header">
+        点歌台
+    </div>
+    <div class="song-list-container">
+        <div class="song-list-title">歌曲列表(20)</div>
+        <div class="song-list">
+        <!--<div class="song-row">-->
+            <!--<div class="song-name">-->
+                <!--<span>爱情废柴</span>-->
+            <!--</div>-->
+            <!--<div class="song-info">-->
+                <!--<i class="fa fa-check-circle text-active" aria-hidden="true"></i>-->
+                <!--<span>周杰伦</span>-->
+                <!--<span>♦</span>-->
+                <!--<span>周杰伦的床边故事</span>-->
+            <!--</div>-->
+            <!--<div class="btn-song">-->
+                <!--<i class="fa fa-microphone" aria-hidden="true"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/dropload.min.js"></script>
+<script src="../js/selectSong.js"></script>
+<script>
+    $(function(){
+        $(".song-row").delegate('click',function(){
+            alert(":000")
+            //            window.location.href = "controller.html"
+        });
+        $(".song-row").on("touchstart","div",function(){
+            alert(":000")
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+@import "public";
+.select-song-header{
+  padding:px2rem(20px) 0;
+  text-align: center;
+  font-size: px2rem(30px);
+  border-bottom: px2rem(1px) solid $lineColor;
+}
+
+.song-list-title{
+  padding:px2rem(20px) 0 px2rem(20px) px2rem(30px);
+  font-size: px2rem(24px);
+  color:$activeColor;
+  border-bottom:px2rem(1px) solid $lineColor;
+}
+.song-row{
+  position: relative;
+  padding:px2rem(23px) px2rem(30px) px2rem(20px) px2rem(30px);
+  border-bottom:px2rem(1px) solid $lineColor;
+}
+
+.song-name{
+  font-size: px2rem(30px);
+}
+.song-info{
+  font-size: px2rem(24px);
+  margin-top:px2rem(12px);
+  color:$fontSizeLightGray;
+}
+
+.btn-song{
+  position: absolute;
+  top:px2rem(45px);
+  right:px2rem(40px);
+  color:#7e7e7e;
+  font-size: px2rem(26px);
+}

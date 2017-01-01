@@ -1,0 +1,161 @@
+//定义一些全局颜色
+$fontSizeLightGray: #c0c0c0;
+$fontSizeDarkGray: #808080;
+$lineColor: #e0e0e0;
+$activeColor: #20cc85;
+$dangerColor: #d81200;
+
+@function px2rem($px) {
+  $rem: 75px;
+  @return ($px/$rem) + rem;
+}
+
+body {
+  font-size: px2rem(20px);
+  color: #404040;
+  -webkit-user-select: none; /* 禁止选中文本（如无文本选中需求，此为必选项） */
+  user-select: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input,textarea{
+  -webkit-appearance: none;
+}
+
+li {
+  list-style: none;
+}
+
+a, img {
+  -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
+
+.text-danger {
+  color: $dangerColor;
+}
+
+.text-active {
+  color: $activeColor
+}
+
+.overflow-point{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+//视频详情
+
+
+.video-pic{
+  position: relative;
+  height:px2rem(392px);
+  background: url(../img/video01.jpg)no-repeat center;
+  background-size:cover;
+}
+.play-icon{
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:px2rem(100px);
+  height:px2rem(100px);
+  border-radius: 100%;
+  border:px2rem(1px) solid rgba(255,255,255,.3);
+  margin-top:px2rem(-50px);
+  margin-left:px2rem(-50px);
+  background-color: rgba(0,0,0,0);
+  span{
+    position: absolute;
+    top:50%;
+    left:50%;
+    height:0;
+    width:0;
+    border-left:px2rem(35px) solid rgba(255,255,255,.5);
+    border-top:px2rem(35px) solid rgba(0,0,0,0);
+    border-bottom:px2rem(35px) solid rgba(0,0,0,0);
+    margin-top:px2rem(-35px);
+    margin-left:px2rem(-17.5px);
+  }
+}
+
+.video-feedback{
+  margin-top:px2rem(15px);
+}
+.common-list{
+  padding: px2rem(36px) px2rem(8px);
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  color:$fontSizeLightGray;
+  li{
+    width:px2rem(148px);
+  }
+  i{
+    font-size: px2rem(30px);
+    margin-right:px2rem(18px);
+  }
+  span{
+    font-size: px2rem(20px);
+  }
+}
+.share{
+  flex-grow:1;
+  text-align: right;
+}
+
+//评论内容
+.row-comment{
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  padding: px2rem(36px) 0 px2rem(27px) px2rem(6px);
+  border-bottom: px2rem(1px) solid $lineColor;
+}
+.user-pic{
+  width:px2rem(60px);
+  height:px2rem(60px);
+  border-radius: 100%;
+  margin-right:px2rem(20px);
+}
+.user-pic1{
+  background: url(../img/user.jpg) no-repeat center;
+  background-size:cover;
+}.user-pic2{
+   background: url(../img/user02.jpg) no-repeat center;
+   background-size:cover;
+ }.user-pic3{
+    background: url(../img/user03.jpg) no-repeat center;
+    background-size:cover;
+  }.user-pic4{
+     background: url(../img/user04.jpg) no-repeat center;
+     background-size:cover;
+   }
+
+
+.user-name{
+  padding-top:px2rem(6px);
+  width:100%;
+  span{
+    display: inline-block;
+    width:60%;
+    overflow: hidden;
+    color:#808080;
+    font-size: px2rem(26px);
+  }
+  i{
+    font-style: normal;
+    float: right;
+    padding-right:px2rem(45px);
+    color:$fontSizeLightGray;
+  }
+}
+.comment-text{
+  margin-top:px2rem(30px);
+  font-size: px2rem(30px);
+  padding-right:px2rem(45px);
+}

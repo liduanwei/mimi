@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function (e) {
+            document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+        }, false);
+    </script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/controller.css">
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="ctrl-header">
+            <div class="ctrl-song-name">你还要我怎样</div>
+            <div class="ctrl-singer-name">- <span>薛之谦</span> -</div>
+        </div>
+        <div class="ctrl-body">
+            <div class="ctrl-song-pic">
+
+            </div>
+        </div>
+        <div class="ctrl-footer">
+            <ul class="play-box">
+                    <li class="play-pause">
+                        <div class="play">
+                            <i class="fa fa-play" aria-hidden="true"></i><br/>
+                            播放
+                        </div>
+                            <div class="pause">
+                                <i class="fa fa-pause" aria-hidden="true"></i><br/>
+                                暂停
+                            </div>
+                </li>
+                <li class="play-original">
+                    <div class="origin-song">
+                        <i class="fa fa-music" aria-hidden="true"></i><br/>
+                        <span>伴唱</span>
+                    </div>
+                    </li>
+                <li class="play-Again">
+                    <i class="fa fa-refresh" aria-hidden="true"></i><br/>
+                    <span>重唱</span>
+                    </li>
+                <li class="play-stop">
+                    <i class="fa fa-stop-circle" aria-hidden="true"></i><br/>
+                    <span>停止</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="bg-blur"></div>
+<script src="../js/zepto.min.js"></script>
+</body>
+</html>

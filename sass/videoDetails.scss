@@ -1,0 +1,51 @@
+@import "public";
+body{
+  background-color: #eee;
+}
+.video-feedback{
+  padding: px2rem(10px);
+}
+.video-play{
+  background-color: #fff;
+}
+.comment-container{
+  padding-left:px2rem(30px);
+  margin-top:px2rem(16px);
+  background-color: #fff;
+  padding-bottom:px2rem(60px)
+}
+.coment-content{
+  width: 100%;
+}
+.hot-comment{
+  padding:px2rem(20px) 0;
+  font-size: px2rem(20px);
+  color:$activeColor;
+  border-bottom:px2rem(1px) solid $lineColor;
+}
+
+//输入评论
+.edit-comment{
+  position: fixed;
+  bottom:0;
+  left:0;
+  display: block;
+  width: 100%;
+  padding:px2rem(13px) px2rem(20px);
+  border-top:px2rem(1px) solid $lineColor;
+}
+.ipt-box{
+  width: 100%;
+  border-radius: px2rem(5px);
+  input{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: px2rem(26px);
+    padding: px2rem(20px) px2rem(24px);
+    outline: none;
+    border-radius: px2rem(5px);
+    border:px2rem(1px) solid $lineColor;
+
+  }
+}
