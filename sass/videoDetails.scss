@@ -33,19 +33,29 @@ body{
   width: 100%;
   padding:px2rem(13px) px2rem(20px);
   border-top:px2rem(1px) solid $lineColor;
+  background-color: #fff;
 }
 .ipt-box{
   width: 100%;
   border-radius: px2rem(5px);
   input{
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 80%;
     height: 100%;
     font-size: px2rem(26px);
     padding: px2rem(20px) px2rem(24px);
     outline: none;
     border-radius: px2rem(5px);
     border:px2rem(1px) solid $lineColor;
-
+  }
+  button {
+    font-style: normal;
+    border:px2rem(1px) solid $lineColor;
+    display: inline-block;
+    font-size:px2rem(26px);
+    color:$activeColor;
+    padding: px2rem(20px) px2rem(24px);
+    border-radius: px2rem(5px);
+    margin-left:2%;
   }
 }

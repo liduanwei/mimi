@@ -94,7 +94,8 @@ a, img {
   width: 0.8rem;
   height: 0.8rem;
   border-radius: 100%;
-  margin-right: 0.26667rem; }
+  margin-right: 0.26667rem;
+  background-size: cover; }
 
 .user-pic1 {
   background: url(../img/user.jpg) no-repeat center;

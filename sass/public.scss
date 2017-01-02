@@ -121,6 +121,7 @@ a, img {
   height:px2rem(60px);
   border-radius: 100%;
   margin-right:px2rem(20px);
+  background-size:cover;
 }
 .user-pic1{
   background: url(../img/user.jpg) no-repeat center;
@@ -135,7 +136,6 @@ a, img {
      background: url(../img/user04.jpg) no-repeat center;
      background-size:cover;
    }
-
 
 .user-name{
   padding-top:px2rem(6px);
