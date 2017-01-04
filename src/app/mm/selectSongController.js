@@ -9,46 +9,36 @@ angular.module('app')
 
             $scope.pageInfo = {};
 
-            $scope.param = {};
-
             $scope.loading = true;
 
             $scope.pageInfo.songsTotal = 500;
 
-            // 加载当前企业的所有成员
-
+            $scope.param = {};
             $scope.param.pageSize = 20;
 
             $scope.search = function () {
                 $scope.loading = true;
                 $.ajax({
-                    url: '/company/list?t=' + Math.random(),
+                    url: '/data/selectSong.json?t=' + Math.random(),
+                    method: 'get',
                     data: $scope.param,
-                    dataType: "text",
-                    success: function (result) {
-
-                        result = $.handleJSON(result);
-                        // result = JSON.parse(result);
-                        $scope.loading = false;
-                        if (result['httpCode'] == 200) {
-                            $scope.pageInfo = result.data;
-                            $scope.selectedCompany = $scope.pageInfo.records[0];
-                        } else {
-                            $scope.msg = result.msg;
-                        }
-                        $scope.$apply();
-                    }
+                    dataType: "text"
                 }).then(function (result) {
-
+                    result = $.handleJSON(result);
+                    $scope.loading = false;
+                    if (result['httpCode'] == 200) {
+                        $scope.pageInfo.songs = result.data;
+                    } else {
+                        $scope.msg = result.msg;
+                    }
+                    $scope.$apply();
                 });
             };
 
-            // $scope.search();
+            $scope.search();
 
-            $scope.pageInfo.records = [1, 2, 3, 4, 5, 6];
-            // $scope.$apply();
 
-            $scope.stateGo = function (url, params) {
-                $state.go(url, params);
+            $scope.stateGo = function (url, item) {
+                $state.go(url, {songName: item.songName, singerName: item.singerName});
             }
         }]);

@@ -11,6 +11,7 @@ app.controller('listController', ['$scope', '$rootScope', '$state', '$timeout', 
             $sp: $scope,
             url: "/user/work/list",
             onPageFinished: function (sp, dataJson, items) {
+                $scope.loading = $scope.pageItemsLoader.busy;
                 $scope.pageInfo.records = items;
                 $scope.param.pageNum = $scope.pageItemsLoader.page;
                 $scope.$apply();

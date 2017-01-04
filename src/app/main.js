@@ -108,8 +108,6 @@ app.controller('AppCtrl', ['$scope', '$localStorage', '$window', '$http', '$stat
                 return;
             }
 
-            console.log("j:" + JSON.stringify(xhr.responseJSON));
-
             if (xhr.responseJSON.httpCode == 401) { //未登录
                 $state.go('access.login');
                 $.ajax({
@@ -132,7 +130,7 @@ app.controller('AppCtrl', ['$scope', '$localStorage', '$window', '$http', '$stat
         });
     }]);
 
-/*无限自动分页加载*/
+/*无限自动加载分页*/
 app.factory('PageItemsLoader', function () {
     var PageItemsLoader = function (options) {
         this.items = [];

@@ -126,7 +126,7 @@ var app = angular.module('app')
                 template: '<div ui-view class="fade-in-right-big smooth"></div>'
             })
             .state("main.controller.home", {
-                url: "/controller",
+                url: "/controller/{songName}/{singerName}",
                 templateUrl: "src/app/mm/controller.html",
                 controller: "controllerController",
                 css: "/res/css/controller.css",

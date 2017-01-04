@@ -1,10 +1,57 @@
-{ "data": [
-  { "songName": "自由飞翔", "singerName":"凤凰传奇", "album": "凤凰传奇","status":"0" },
-  { "songName": "蒲公英的约定", "singerName":"周杰伦", "album": "不能说的秘密","status":"1" },
-  { "songName": "演员", "singerName":"薛之谦", "album": "凤凰传奇","status":"1" },
-  { "songName": "水手怕水", "singerName":"周杰伦", "album": "凤凰传奇","status":"1" },
-  { "songName": "悲伤的大提琴", "singerName":"周杰伦", "album": "凤凰传奇","status":"1" },
-  { "songName": "太爱我", "singerName":"罗志祥", "album": "凤凰传奇","status":"1" },
-  { "songName": "安静", "singerName":"周杰伦", "album": "凤凰传奇","status":"1" },
-  { "songName": "爱我还是他", "singerName":"林俊杰", "album": "凤凰传奇","status":"1" }
-]}
+{
+  "data": {
+    "records": [
+      {
+        "songName": "自由飞翔",
+        "singerName": "凤凰传奇",
+        "album": "凤凰传奇",
+        "status": "0"
+      },
+      {
+        "songName": "蒲公英的约定",
+        "singerName": "周杰伦",
+        "album": "不能说的秘密",
+        "status": "1"
+      },
+      {
+        "songName": "演员",
+        "singerName": "薛之谦",
+        "album": "凤凰传奇",
+        "status": "1"
+      },
+      {
+        "songName": "水手怕水",
+        "singerName": "周杰伦",
+        "album": "凤凰传奇",
+        "status": "1"
+      },
+      {
+        "songName": "悲伤的大提琴",
+        "singerName": "周杰伦",
+        "album": "凤凰传奇",
+        "status": "1"
+      },
+      {
+        "songName": "太爱我",
+        "singerName": "罗志祥",
+        "album": "凤凰传奇",
+        "status": "1"
+      },
+      {
+        "songName": "安静",
+        "singerName": "周杰伦",
+        "album": "凤凰传奇",
+        "status": "1"
+      },
+      {
+        "songName": "爱我还是他",
+        "singerName": "林俊杰",
+        "album": "凤凰传奇",
+        "status": "1"
+      }
+    ]
+  },
+  "httpCode": 200,
+  "msg": "请求成功",
+  "timestamp": 1483534499276
+}

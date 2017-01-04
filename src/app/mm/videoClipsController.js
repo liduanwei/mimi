@@ -6,8 +6,6 @@ app.controller('videoClipsController', ['$scope', '$rootScope', '$state', '$time
     function ($scope, $rootScope, $state, $timeout, toaster, PageItemsLoader, $stateParams, $sce) {
         var title = $stateParams.workTitle;
 
-        console.log($stateParams);
-
         document.title = $scope.title = $rootScope.title = title;
 
 
@@ -20,8 +18,6 @@ app.controller('videoClipsController', ['$scope', '$rootScope', '$state', '$time
         $scope.loading = false;
 
         $scope.param.pageSize = 20;
-
-        console.log("workId:" + ($stateParams.workId));
 
         $scope.workId = $stateParams.workId;
 
@@ -51,7 +47,6 @@ app.controller('videoClipsController', ['$scope', '$rootScope', '$state', '$time
         };
 
         $scope.search();
-        console.log("workId:" + $stateParams.workId);
 
         $scope.stateTo = function (subWorkId) {
             $state.go("main.videoDetail.home", {subWorkId: subWorkId});

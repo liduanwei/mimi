@@ -9,16 +9,16 @@ angular.module('app')
 
             $scope.subWorkId = $stateParams.subWorkId;
 
-            console.log("subWorkId:" + $scope.subWorkId);
-
             $scope.pageInfo = {};
+            $scope.pageInfo.commentsInfo = {
+                // total: 20
+            };
 
             $scope.commentPageItemsLoader = new PageItemsLoader({
                 $sp: $scope,
                 url: "/user/subwork/comment/" + $scope.subWorkId + "/list",
                 onPageFinished: function (sp, data, items) {
-                    console.log("info:" + JSON.stringify(data));
-                    $scope.pageInfo.commentsInfo = data;
+                    $scope.pageInfo.commentsInfo = data.data;
                     $scope.pageInfo.comments = items;
                     $scope.param.pageNum = $scope.commentPageItemsLoader.page;
                     $scope.loading = $scope.commentPageItemsLoader.busy;
@@ -32,7 +32,6 @@ angular.module('app')
             $scope.param.pageNum = $scope.commentPageItemsLoader.page;
 
             $scope.param.pageSize = 10;
-
 
             $scope.pageInfo.comments = $scope.commentPageItemsLoader.items;
             $scope.param.pageNum = $scope.commentPageItemsLoader.page;
@@ -88,21 +87,21 @@ angular.module('app')
 
 
             // 初始化页面
-            function activate(id) {
-                $scope.loading = true;
-                $.ajax({
-                    url: '/company/read/detail',
-                    data: {'id': id}
-                }).then(function (result) {
-                    $scope.loading = false;
-                    if (result.httpCode == 200) {
-                        $scope.record = result.data;
-                    } else {
-                        $scope.msg = result.msg;
-                    }
-                    $scope.$apply();
-                });
-            }
+            // function activate(id) {
+            //     $scope.loading = true;
+            //     $.ajax({
+            //         url: '/company/read/detail',
+            //         data: {'id': id}
+            //     }).then(function (result) {
+            //         $scope.loading = false;
+            //         if (result.httpCode == 200) {
+            //             $scope.record = result.data;
+            //         } else {
+            //             $scope.msg = result.msg;
+            //         }
+            //         $scope.$apply();
+            //     });
+            // }
 
             $scope.record = {};
 

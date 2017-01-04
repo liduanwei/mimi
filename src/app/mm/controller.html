@@ -1,8 +1,8 @@
 <div class="container">
     <div class="content">
         <div class="ctrl-header">
-            <div class="ctrl-song-name">你还要我怎样</div>
-            <div class="ctrl-singer-name">- <span>薛之谦</span> -</div>
+            <div class="ctrl-song-name">{{pageInfo.song.title}}</div>
+            <div class="ctrl-singer-name">- <span>{{pageInfo.song.singer}}</span> -</div>
         </div>
         <div class="ctrl-body">
             <div class="ctrl-song-pic">
@@ -11,28 +11,28 @@
         </div>
         <div class="ctrl-footer">
             <ul class="play-box">
-                    <li class="play-pause">
-                        <div class="play">
-                            <i class="fa fa-play" aria-hidden="true"></i><br/>
-                            播放
-                        </div>
-                            <div class="pause">
-                                <i class="fa fa-pause" aria-hidden="true"></i><br/>
-                                暂停
-                            </div>
+                <li class="play-pause">
+                    <div class="play">
+                        <i class="fa fa-play" aria-hidden="true"></i><br/>
+                        播放
+                    </div>
+                    <div class="pause">
+                        <i class="fa fa-pause" aria-hidden="true"></i><br/>
+                        暂停
+                    </div>
                 </li>
                 <li class="play-original">
                     <div class="origin-song">
                         <i class="fa fa-music" aria-hidden="true"></i><br/>
                         <span>伴唱</span>
                     </div>
-                    </li>
+                </li>
                 <li class="play-Again">
                     <i class="fa fa-refresh" aria-hidden="true"></i><br/>
                     <span>重唱</span>
-                    </li>
+                </li>
                 <li class="play-stop">
-                    <i class="fa fa-stop" aria-hidden="true"></i><br/>
+                    <i class="fa fa-stop-circle" aria-hidden="true"></i><br/>
                     <span>停止</span>
                 </li>
             </ul>
