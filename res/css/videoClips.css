@@ -1,0 +1,162 @@
+
+.video-pic {
+  position: relative;
+  height: 5.22667rem;
+  background: url(/res/img/video01.jpg) no-repeat center;
+  background-size: cover; }
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.33333rem;
+  height: 1.33333rem;
+  border-radius: 100%;
+  border: 0.01333rem solid rgba(255, 255, 255, 0.3);
+  margin-top: -0.66667rem;
+  margin-left: -0.66667rem;
+  background-color: transparent; }
+  .play-icon span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0;
+    width: 0;
+    border-left: 0.46667rem solid rgba(255, 255, 255, 0.5);
+    border-top: 0.46667rem solid transparent;
+    border-bottom: 0.46667rem solid transparent;
+    margin-top: -0.46667rem;
+    margin-left: -0.23333rem; }
+
+.video-feedback {
+  margin-top: 0.2rem; }
+
+.common-list {
+  padding: 0.48rem 0.10667rem;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  color: #c0c0c0; }
+  .common-list li {
+    width: 1.97333rem; }
+  .common-list i {
+    font-size: 0.4rem;
+    margin-right: 0.24rem; }
+  .common-list span {
+    font-size: 0.26667rem; }
+
+.share {
+  flex-grow: 1;
+  text-align: right; }
+
+.row-comment {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  padding: 0.48rem 0 0.36rem 0.08rem;
+  border-bottom: 0.01333rem solid #e0e0e0; }
+
+.user-pic {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100%;
+  margin-right: 0.26667rem; }
+
+.user-pic1 {
+  background: url(/res/img/user.jpg) no-repeat center;
+  background-size: cover; }
+
+.user-pic2 {
+  background: url(/res/img/user02.jpg) no-repeat center;
+  background-size: cover; }
+
+.user-pic3 {
+  background: url(/res/img/user03.jpg) no-repeat center;
+  background-size: cover; }
+
+.user-pic4 {
+  background: url(/res/img/user04.jpg) no-repeat center;
+  background-size: cover; }
+
+.user-name {
+  padding-top: 0.08rem;
+  width: 100%; }
+  .user-name span {
+    display: inline-block;
+    width: 60%;
+    overflow: hidden;
+    color: #808080;
+    font-size: 0.34667rem; }
+  .user-name i {
+    font-style: normal;
+    float: right;
+    padding-right: 0.6rem;
+    color: #c0c0c0; }
+
+.comment-text {
+  margin-top: 0.4rem;
+  font-size: 0.4rem;
+  padding-right: 0.6rem; }
+
+.container {
+  background-color: #fff;
+  padding-bottom: 0.53333rem; }
+
+.video-title {
+  height: 0.93333rem;
+  line-height: 0.93333rem;
+  text-align: center;
+  font-size: 0.4rem;
+  border-bottom: 0.01333rem solid #e0e0e0; }
+
+.empty {
+  height: 0.56rem; }
+
+.video-content {
+  overflow: hidden;
+  background-color: #eee; }
+
+.video-list {
+  background-color: #fff;
+  padding: 0 0.4rem;
+  margin-top: 0.13333rem; }
+
+.video-pic {
+  position: relative; }
+
+.video-time {
+  position: absolute;
+  bottom: 0.13333rem;
+  right: 0.2rem;
+  color: #fff;
+  font-size: 0.33333rem; }
+
+.user-info {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  padding: 0.53333rem 0 0.26667rem 0; }
+
+.user-box, .user-name {
+  float: left; }
+
+.user-pic {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100%;
+  background: url(/res/img/user.jpg) no-repeat center;
+  background-size: cover; }
+
+.user-name {
+  padding-left: 0.29333rem;
+  font-size: 0.34667rem;
+  line-height: 2.3;
+  color: #808080; }
+
+.video-part {
+  padding: 0.08rem 0 0.4rem 0;
+  font-size: 0.4rem; }
+
+.comment-bg {
+  background-color: rgba(248, 248, 248, 0.3);
+  border-bottom: none; }

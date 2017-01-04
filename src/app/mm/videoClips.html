@@ -1,0 +1,86 @@
+<!-- 加载提醒 -->
+<div ng-show="loading" class="text-center"><i class="fa fa-spin fa-spinner"></i> 数据加载中...</div>
+
+
+<div class="container">
+    <div class="video-header">
+        <div class="video-title">
+            {{title || '视频片段'}}
+        </div>
+        <div class="empty"></div>
+    </div>
+
+    <style>
+        .video-js .vjs-big-play-button {
+            text-align: center;
+        }
+    </style>
+    <div class="video-content">
+        <div class="video-list" ng-repeat="item in pageInfo.records.records">
+            <div class="user-info">
+                <div class="user-box">
+                    <div class="user-pic" style="background-image:url({{pageInfo.author.avatar}})"></div>
+                </div>
+                <div class="user-name">
+                    {{pageInfo.author.userName}}
+                </div>
+            </div>
+            <div class="video-part">
+                <span ng-click="stateTo(item.id)">{{item.title}}</span><span></span>
+            </div>
+            <div class="video-play">
+                <video id="my-video"
+                       class="video-js video-pic vjs-default-skin vjs-big-play-centered"
+                       controls
+                       preload="auto" width="100%" height="100%"
+                       ng-style="{backgroundImage:'url('+item.cover+')'}"
+                       poster="{{ item.cover }}" data-setup="{}">
+
+                    <div class="play-icon">
+                        <span></span>
+                    </div>
+
+                    <span class="video-time" style="background-color:rgba(100,100,100,.7);color:#fff;">3:40</span>
+
+                    <source ng-src="{{trustVideoUrl(item.videoId)}}" type='video/mp4'>
+                    <source ng-src="{{trustVideoUrl(item.videoId)}}" type='video/webm'>
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a web browser that
+                        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+
+                </video>
+
+                <!--默认评论 star-->
+                <div class="row-comment comment-bg" ng-click="stateTo(item.id)">
+                    <div class="user-pic user-pic3">
+
+                    </div>
+                    <div class="coment-content">
+                        <div class="user-name">
+                            <span class="overflow-point">回忆、勾勒的曾经</span>
+                            <i>2小时前</i>
+                        </div>
+                        <div class="comment-text">
+                            真是太棒了，这是什么设备啊？我也要去唱
+                        </div>
+                    </div>
+                </div>
+                <!--默认评论 end-->
+                <div class="video-feedback">
+                    <ul class="common-list">
+                        <li class="approval"><i class="fa fa-thumbs-up"
+                                                aria-hidden="true"></i><span>{{item.upCount}}</span></li>
+                        <li class="tread"><i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                            <span>{{item.downCount}}</span></li>
+                        <li class="comment"><i class="fa fa-comment" aria-hidden="true"></i></i>
+                            <span>{{item.cmtCount}}</span>
+                        </li>
+                        <li class="share"><i class="fa fa-mail-forward" aria-hidden="true"></i> <span>{{item.shareCount}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

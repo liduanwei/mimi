@@ -1,0 +1,146 @@
+<div class="container">
+    <div class="video-play">
+
+        <video id="my-video"
+               class="video-js video-pic vjs-default-skin vjs-big-play-centered"
+               controls
+               preload="auto" width="100%" height="100%"
+               ng-style="{backgroundImage:'url('+pageInfo.subWork.cover+')'}"
+               poster="{{ pageInfo.subWork.cover }}" data-setup="{}">
+
+            <div class="play-icon">
+                <span></span>
+            </div>
+
+            <span class="video-time" style="background-color:rgba(100,100,100,.7);color:#fff;">3:40</span>
+
+            <source ng-src="{{trustVideoUrl(pageInfo.subWork.videoId)}}" type='video/mp4'>
+            <source ng-src="{{trustVideoUrl(pageInfo.subWork.videoId)}}" type='video/webm'>
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+
+        </video>
+
+
+        <div class="video-feedback">
+            <ul class="common-list">
+                <li class="approval"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>{{pageInfo.subWork.upCount}}</span></li>
+                <li class="tread"><i class="fa fa-thumbs-down" aria-hidden="true"></i> <span>{{pageInfo.subWork.downCount}}</span></li>
+                <li class="comment"><i class="fa fa-comment" aria-hidden="true"></i></i> <span>{{pageInfo.subWork.cmtCount}}</span>
+                </li>
+                <li class="share"><i class="fa fa-mail-forward" aria-hidden="true"></i> <span>{{pageInfo.subWork.shareCount}}</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 加载提醒 -->
+    <div ng-show="loading" class="text-center"><i class="fa fa-spin fa-spinner"></i> 数据加载中...</div>
+
+
+    <div class="comment-container"  infinite-scroll="commentPageItemsLoader.nextPage()" infinite-scroll-disabled="commentPageItemsLoader.busy" infinite-scroll-distance="1">
+        <div class="hot-comment">
+            热门评论({{pageInfo.commentsInfo.total}})
+        </div>
+
+        <div class="row-comment" ng-repeat="item in pageInfo.comments">
+            <div class="user-pic user-pic2" ng-style="{backgroundImage:'url('+ item.avatar + ')'}">
+
+            </div>
+            <div class="coment-content">
+                <div class="user-name">
+                    <span class="overflow-point">{{item.userName}}</span>
+                    <i>{{item.createTime}}</i>
+                </div>
+                <div class="comment-text">
+                    {{item.content}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="commentPageItemsLoader.busy" style="text-align: center;" class="ng-hide"><i class="fa fa-spin fa-spinner"></i><span>Loading...</span></div>
+    <div class="loadMore text-center" ng-click="commentPageItemsLoader.nextPage();" id="btnLoadMore">加载更多</div>
+</div>
+
+<div class="edit-comment">
+    <div class="ipt-box">
+        <form class="form">
+            <input type="text" placeholder="输入评论" name="content" ng-model="record.content" id="commentIpt">
+            <button ng-disabled="isDisabled" type="submit">发送</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    //        input自动换行，自适应高度
+    var autoTextarea = function (elem, extra, maxHeight) {
+        extra = extra || 0;
+        var isFirefox = !!document.getBoxObjectFor || 'mozInnerScreenX' in window,
+                isOpera = !!window.opera && !!window.opera.toString().indexOf('Opera'),
+                addEvent = function (type, callback) {
+                    elem.addEventListener ?
+                            elem.addEventListener(type, callback, false) :
+                            elem.attachEvent('on' + type, callback);
+                },
+                getStyle = elem.currentStyle ? function (name) {
+                    var val = elem.currentStyle[name];
+
+                    if (name === 'height' && val.search(/px/i) !== 1) {
+                        var rect = elem.getBoundingClientRect();
+                        return rect.bottom - rect.top -
+                                parseFloat(getStyle('paddingTop')) -
+                                parseFloat(getStyle('paddingBottom')) + 'px';
+                    }
+                    ;
+
+                    return val;
+                } : function (name) {
+                    return getComputedStyle(elem, null)[name];
+                },
+                minHeight = parseFloat(getStyle('height'));
+
+        elem.style.resize = 'none';
+
+        var change = function () {
+            var scrollTop, height,
+                    padding = 0,
+                    style = elem.style;
+
+            if (elem._length === elem.value.length) return;
+            elem._length = elem.value.length;
+
+            if (!isFirefox && !isOpera) {
+                padding = parseInt(getStyle('paddingTop')) + parseInt(getStyle('paddingBottom'));
+            }
+            ;
+            scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+
+            elem.style.height = minHeight + 'px';
+            if (elem.scrollHeight > minHeight) {
+                if (maxHeight && elem.scrollHeight > maxHeight) {
+                    height = maxHeight - padding;
+                    style.overflowY = 'auto';
+                } else {
+                    height = elem.scrollHeight - padding;
+                    style.overflowY = 'hidden';
+                }
+                ;
+                style.height = height + extra + 'px';
+                scrollTop += parseInt(style.height) - elem.currHeight;
+//                    document.body.scrollTop = scrollTop;
+                document.documentElement.scrollTop = scrollTop;
+                elem.currHeight = parseInt(style.height);
+            }
+            ;
+        };
+
+        addEvent('propertychange', change);
+        addEvent('input', change);
+        addEvent('focus', change);
+        change();
+    };
+</script>
+

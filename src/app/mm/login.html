@@ -1,0 +1,47 @@
+<style>
+    .login-box {
+        position: relative;
+        width: 375px;
+        height: 675px;
+        border: 1px solid red;
+    }
+
+    .login-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;;
+        height: 500px;;
+        margin-top: -250px;
+        margin-left: -150px;
+    }
+</style>
+
+<div class="login-box">
+    <form class="login-form" ng-submit="login()">
+        <div class="user-name">
+            <span>用户:</span>
+            <input type="text" ng-model="user.account" name="account" value="William" id="userName">
+        </div>
+        <div style="margin-top:30px;">
+            <span>密码:</span>
+            <input type="text" ng-model="user.password" name="password" value="admin" id="psw">
+        </div>
+        <div style="margin-top:20px;text-align: center;">
+            <button id="loginBtn" class="btn btn-primary btn-lg btn-block" type="submit">Log in</button>
+        </div>
+    </form>
+</div>
+<!--<script>-->
+<!--$(function(){-->
+<!--$("#loginBtn").click(function(){-->
+<!--var userName = $("userName").val();-->
+<!--var pws = $("psw").val();-->
+<!--$.post('http://mm1.jinrustar.com/login', { account: 'userName',password:"pws"}, function(response){-->
+<!--console.log(response);-->
+<!--})-->
+<!--})-->
+<!--})-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->

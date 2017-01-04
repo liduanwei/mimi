@@ -1,0 +1,29 @@
+
+<div class="container">
+    <div class="select-song-header">
+        点歌台
+    </div>
+
+    <!-- 加载提醒 -->
+    <div ng-show="loading" class="text-center"><i class="fa fa-spin fa-spinner"></i> 数据加载中...</div>
+
+    <div class="song-list-container">
+        <div class="song-list-title">歌曲列表({{pageInfo.songsTotal}})</div>
+        <div class="song-list">
+            <div class="song-row" ng-repeat="item in pageInfo.records" ng-click="stateGo('main.controller.home')">
+                <div class="song-name">
+                    <span>爱情废柴{{ $index +1 }}</span>
+                </div>
+                <div class="song-info">
+                    <i class="fa fa-check-circle text-active" aria-hidden="true"></i>
+                    <span>周杰伦</span>
+                    <span>♦</span>
+                    <span>周杰伦的床边故事</span>
+                </div>
+                <div class="btn-song">
+                    <i class="fa fa-microphone" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

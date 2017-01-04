@@ -1,0 +1,50 @@
+<div class="nav" ng-click="stateGo('main.controller.home')">
+    <!--<ul class="nav-list">-->
+        <!--<li>-->
+            <!--<span class="music-icon01"></span>-->
+            <!--<div>我的歌曲</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<span class="music-icon02"></span>-->
+            <!--<div>我的专辑</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<span class="music-icon03"></span>-->
+            <!--<div>个人中心</div>-->
+        <!--</li>-->
+    <!--</ul>-->
+    我的歌曲
+</div>
+
+
+<!-- 加载提醒 -->
+<div ng-show="loading" class="text-center"><i class="fa fa-spin fa-spinner"></i> 数据加载中...</div>
+
+
+
+<div class="content">
+    <div class="content-header">
+        <div>歌曲列表</div>
+        <a class="text-active" ui-sref="main.selectSong.list">我要唱歌</a>
+    </div>
+    <div class="content-body">
+        <!--infinite-scroll="pageItemsLoader.nextPage()" infinite-scroll-disabled="pageItemsLoader.busy" infinite-scroll-distance="1"-->
+        <div class="content-list" infinite-scroll="pageItemsLoader.nextPage()" infinite-scroll-disabled="pageItemsLoader.busy" infinite-scroll-distance="1">
+
+            <div class="my-song-row" ng-repeat="item in pageInfo.records" ng-click="stateTo(item)">
+                <div class="song-pic song01" ng-style="{backgroundImage: 'url(' + item.cover + ')'}"></div>
+                <div class="song-info">
+                    <!--{{$index+1}}-->
+                    <div class="song-name overflow-point">{{item.title}}</div>
+                    <div class="song-data">
+                        <span>浏览<b>{{item.pvCount}}</b>次</span>
+                        <span class="{{item.updateStatus == '2' ? 'text-active' : 'text-danger'}} update">{{item.updateStatus == '2' ? '更新完成' : '更新中'}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="pageItemsLoader.busy" style="text-align: center;" class="ng-hide"><i class="fa fa-spin fa-spinner"></i><span>Loading...</span></div>
+        <div class="loadMore text-center" ng-click="pageItemsLoader.nextPage();" id="btnLoadMore">加载更多</div>
+    </div>
+</div>
